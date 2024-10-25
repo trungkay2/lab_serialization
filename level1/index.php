@@ -7,7 +7,7 @@ class User
     public $address;
 
     function __construct($name, $email, $address){
-        $name = str_replace(array('/','\\','.'), '', $name);
+        // $name = str_replace(array('/','\\','.'), '', $name);
         $this->name = $name;
         $this->backupFile = "/backup/users/" . $name;
         $this->email = $email;
@@ -27,4 +27,3 @@ class User
 
 unserialize($_GET['data']);
 ?>
-<H1> Try to RCE me </H1>
